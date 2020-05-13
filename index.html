@@ -144,14 +144,14 @@ span.psw {
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input id="usernameinput" placeholder="Enter Username" name="uname" required>
+      <input id="usernameinput" placeholder="Enter Username" name="uname">
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input id="pswinput" type="password" placeholder="Enter Password" name="psw">
         
       <button id="logonbtn" type="submit">Login</button>
       <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <input id="rememberuser" type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>
 
@@ -163,6 +163,9 @@ span.psw {
 </div>
   </div>
 <script>
+  var user;
+  var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "iadhya13", "ishaurya.garg", "iaavya.garg"];
+    var pass = ["YmhhdnlhZHdpdmVkaQ==", "anVzdGluZnU=", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn"];
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -174,8 +177,15 @@ window.onclick = function(event) {
 }
   document.getElementById("logonbtn").addEventListener("click", verify());
   function verify(){
-    var username = document.getElementById("usernameinput")
-  
+    var username = document.getElementById("usernameinput").value;
+    var password = btoa(document.getElementById("pswinput").value);
+    if(listuser.includes(username)){
+      var passindex = listuser.indexOf(username);
+      if (pass[passindex] === password){
+        document.getElementById("loginform").style.display = "none";
+        user = username;
+      }
+    }
   }
 </script>
 
