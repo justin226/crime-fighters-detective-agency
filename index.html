@@ -166,7 +166,12 @@ span.psw {
   if(localStorage.getItem("isloggedin") === "yes"){
     document.getElementById("loginform").style.display = "none";
     document.getElementById("loginbtn").style.display = "none";
-    user = ""
+    user = localStorage.getItem("user")
+  }
+  if(sessionStorage.getItem("isloggedin") === "yes"){
+    document.getElementById("loginform").style.display = "none";
+    document.getElementById("loginbtn").style.display = "none";
+    user = sessionStorage.getItem("user")
   }
   var user;
   var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13"];
@@ -189,6 +194,7 @@ window.onclick = function(event) {
         document.getElementById("loginform").style.display = "none";
         document.getElementById("loginbtn").style.display = "none";
         user = username;
+        sessionStorage.setItem("")
       }
       else {alert("Incorrect Password")}
     }
