@@ -194,7 +194,12 @@ window.onclick = function(event) {
         document.getElementById("loginform").style.display = "none";
         document.getElementById("loginbtn").style.display = "none";
         user = username;
-        sessionStorage.setItem("isloggedin", "yes")
+        sessionStorage.setItem("isloggedin", "yes");
+        sessionStorage.setItem("user", user);
+        if(document.getElementById("rememberuser").checked){
+          localStorage.setItem("isloggedin", "yes");
+          localStorage.setItem("user", user);
+        }
       }
       else {alert("Incorrect Password")}
     }
