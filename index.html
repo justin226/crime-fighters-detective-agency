@@ -133,7 +133,7 @@ span.psw {
 <h2>Welcome to the Crime Fighters Agency</h2>
 <div id="loginform">
 <button id="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
+<button id="logoutbtn" style="width:auto; display: none">Logout</button>
 <div id="id01" class="modal">
   
   <div class="modal-content animate">
@@ -206,6 +206,11 @@ window.onclick = function(event) {
     else{
       alert("Incorrect Username")
     }
+  });
+  document.getElementById("logoutbtn").addEventListener("click", function(){
+    localStorage.clear();
+    sessionStorage.clear();
+    location.reload();
   });
 </script>
 
