@@ -157,7 +157,7 @@ span.psw {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw">Forgot <a href="mailto:justin718@gmail.com">password?</a></span>
     </div>
   </form>
 </div>
@@ -174,8 +174,8 @@ span.psw {
     user = sessionStorage.getItem("user")
   }
   var user;
-  var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13"];
-    var pass = ["YmhhdnlhZHdpdmVkaQ==", "anVzdGluZnU=", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn", "YWRoeWFkd2l2ZWRp"];
+  var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal"];
+    var pass = ["YmhhdnlhZHdpdmVkaQ==", "anVzdGluZnU=", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn", "YWRoeWFkd2l2ZWRp", "bmVhbGdvc3dhbWk="];
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -194,7 +194,7 @@ window.onclick = function(event) {
         document.getElementById("loginform").style.display = "none";
         document.getElementById("loginbtn").style.display = "none";
         user = username;
-        sessionStorage.setItem("")
+        sessionStorage.setItem("isloggedin", "yes")
       }
       else {alert("Incorrect Password")}
     }
