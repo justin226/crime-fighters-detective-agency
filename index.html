@@ -163,9 +163,14 @@ span.psw {
 </div>
   </div>
 <script>
+  if(localStorage.getItem("isloggedin") === "yes"){
+    document.getElementById("loginform").style.display = "none";
+    document.getElementById("loginbtn").style.display = "none";
+    user = ""
+  }
   var user;
-  var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "iadhya13", "ishaurya.garg", "iaavya.garg"];
-    var pass = ["YmhhdnlhZHdpdmVkaQ==", "anVzdGluZnU=", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn"];
+  var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13"];
+    var pass = ["YmhhdnlhZHdpdmVkaQ==", "anVzdGluZnU=", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn", "YWRoeWFkd2l2ZWRp"];
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -188,7 +193,7 @@ window.onclick = function(event) {
       else {alert("Incorrect Password")}
     }
     else{
-      alert("Wrong Username")
+      alert("Incorrect Username")
     }
   });
 </script>
