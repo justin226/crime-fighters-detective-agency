@@ -132,7 +132,7 @@ span.psw {
 
 <h2>Welcome to the Crime Fighters Agency</h2>
 <div id="loginform">
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button id="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
   
@@ -175,18 +175,22 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-  document.getElementById("logonbtn").addEventListener("click", verify());
-  function verify(){
+  document.getElementById("logonbtn").addEventListener("click", function(){
     var username = document.getElementById("usernameinput").value;
     var password = btoa(document.getElementById("pswinput").value);
     if(listuser.includes(username)){
       var passindex = listuser.indexOf(username);
       if (pass[passindex] === password){
         document.getElementById("loginform").style.display = "none";
+        document.getElementById("loginbtn").style.display = "none";
         user = username;
       }
+      else {alert("Incorrect Password")}
     }
-  }
+    else{
+      alert("Wrong Username")
+    }
+  });
 </script>
 
 </body>
