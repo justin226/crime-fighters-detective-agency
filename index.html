@@ -163,6 +163,9 @@ span.psw {
   </form>
 </div>
   </div>
+  <div id="portal" style="display: none">
+    
+  </div>
 <script>
   if(localStorage.getItem("isloggedin") === "yes"){
     document.getElementById("loginform").style.display = "none";
@@ -170,6 +173,7 @@ span.psw {
     document.getElementById("logoutbtn").style.display = "block";
     user = localStorage.getItem("user");
     document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
+    document.getElementById("portal").style.display = "block";
   }
   if(sessionStorage.getItem("isloggedin") === "yes"){
     document.getElementById("loginform").style.display = "none";
@@ -177,6 +181,7 @@ span.psw {
     document.getElementById("logoutbtn").style.display = "block";    
     user = localStorage.getItem("user");
     document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
+    document.getElementById("portal").style.display = "block";
   }
   var user;
   var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal"];
@@ -206,6 +211,7 @@ window.onclick = function(event) {
           localStorage.setItem("user", user);
           document.getElementById("logoutbtn").style.display = "block";
           document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
+          document.getElementById("portal").style.display = "block";
         }
       }
       else {alert("Incorrect Password")}
