@@ -213,6 +213,19 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
       <a href="https://flipgrid.com/bhavyadwivedi" target="_blank"><img src="fg.png" alt="Google Sites" width="200" height="200"></a>
     </div>
     <script>
+      // Get the input field
+var input = document.getElementById("pswinput");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("logonbtn").click();
+  }
+});
       if (localStorage.getItem("isloggedin") === "yes") {
         document.getElementById("loginform").style.display = "none";
         document.getElementById("loginbtn").style.display = "none";
