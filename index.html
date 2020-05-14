@@ -158,7 +158,8 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
 
   <body>
 
-    <h2 id="banner">Welcome to the Crime Fighters Agency<br><h5>To get started, please log in.</h5></h2>
+    <h2 id="banner">Welcome to the Crime Fighters Detective Agency </h2>
+    <br><h5 id="plzsi">To get started, please log in.</h5>
     <button id="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
     <button id="logoutbtn" style="width:auto; display: none">Logout</button>
     <div id="loginform">
@@ -171,6 +172,7 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
           </div>
 
           <div class="container">
+            <h2>Sign In to your 226 Account</h2><br>
             <label for="uname"><b>Username</b></label>
             <input id="usernameinput" type="text" placeholder="Enter Username" name="uname">
 
@@ -203,16 +205,18 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
         document.getElementById("loginbtn").style.display = "none";
         document.getElementById("logoutbtn").style.display = "block";
         user = localStorage.getItem("user");
-        document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
+        document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Detective Agency, " + user;
         document.getElementById("portal").style.display = "block";
+        document.getElementById("plzsi").style.display = "none";
       }
       if (sessionStorage.getItem("isloggedin") === "yes") {
         document.getElementById("loginform").style.display = "none";
         document.getElementById("loginbtn").style.display = "none";
         document.getElementById("logoutbtn").style.display = "block";
         user = sessionStorage.getItem("user");
-        document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
+        document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Detective Agency, " + user;
         document.getElementById("portal").style.display = "block";
+        document.getElementById("plzsi").style.display = "none";
       }
       var user;
       var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal"];
@@ -242,8 +246,9 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
               localStorage.setItem("user", user);
             }
             document.getElementById("logoutbtn").style.display = "block";
-            document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
+            document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Detective Agency, " + user;
             document.getElementById("portal").style.display = "block";
+            document.getElementById("plzsi").style.display = "none";
           } else {
             alert("Incorrect Password")
           }
