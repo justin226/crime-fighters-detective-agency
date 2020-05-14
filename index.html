@@ -4,7 +4,7 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
 -->
 <html>
 <head>
-  <title>Welcome to the Crime Fighters Agency Portal</title>
+  <title>Crime Fighters Agency Portal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -168,13 +168,15 @@ span.psw {
     document.getElementById("loginform").style.display = "none";
     document.getElementById("loginbtn").style.display = "none";
     document.getElementById("logoutbtn").style.display = "block";
-    user = localStorage.getItem("user")
+    user = localStorage.getItem("user");
+    document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
   }
   if(sessionStorage.getItem("isloggedin") === "yes"){
     document.getElementById("loginform").style.display = "none";
     document.getElementById("loginbtn").style.display = "none";
     document.getElementById("logoutbtn").style.display = "block";    
-    user = sessionStorage.getItem("user")
+    user = localStorage.getItem("user");
+    document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
   }
   var user;
   var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal"];
@@ -203,6 +205,7 @@ window.onclick = function(event) {
           localStorage.setItem("isloggedin", "yes");
           localStorage.setItem("user", user);
           document.getElementById("logoutbtn").style.display = "block";
+          document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
         }
       }
       else {alert("Incorrect Password")}
