@@ -210,7 +210,7 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
         document.getElementById("loginform").style.display = "none";
         document.getElementById("loginbtn").style.display = "none";
         document.getElementById("logoutbtn").style.display = "block";
-        user = localStorage.getItem("user");
+        user = sessionStorage.getItem("user");
         document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Agency, " + user;
         document.getElementById("portal").style.display = "block";
       }
