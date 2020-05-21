@@ -8,6 +8,45 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
     <title>Crime Fighters Agency Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #555;
+      }
+
+      .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+      }
+
+    </style>
+    <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
       }
@@ -77,7 +116,7 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
         /* Sit on top */
         left: 0;
         top: 0;
-        width: 100%; 
+        width: 100%;
         /* Full width */
         height: 100%;
         /* Full height */
@@ -88,7 +127,7 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
         background-color: rgba(0, 0, 0, 0.4);
         /* Black w/ opacity */
         padding-top: 60px;
-        
+
         text-align: center;
       }
 
@@ -156,31 +195,35 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
           width: 100%;
         }
       }
+
       #error {
         border-color: red;
         background-color: #ffc9c9;
         border-width: 5px;
       }
+
       #anc {
         border-color: yellow;
         background-color: #ffffc7;
         border-width: 5px;
       }
+
     </style>
   </head>
 
   <body>
 
     <h2 id="banner">Welcome to the Crime Fighters Detective Agency </h2>
-    <br><h5 id="plzsi">To get started, please log in.</h5>
+    <br>
+    <h5 id="plzsi">To get started, please log in.</h5>
     <button id="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
     <button id="logoutbtn" style="width:auto; display: none">Logout</button>
     <div id="loginform">
       <div id="id01" class="modal">
 
-            
+
         <div class="modal-content animate">
-          
+
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <br>
@@ -210,37 +253,67 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
       </div>
     </div>
     <div id="portal" style="display: none">
-      <br><div id="anc">
+      <br>
+      <div id="anc">
         Alert: There will be a google meet meeting taking place around 1:00 or 2:00 PM. Please click the Google Meet icon to join.
       </div><br>
       <br>
       <h1>Portal</h1>
       <br>
+      <h2>Classes</h2><br>
       <a href="https://app.seesaw.me/" target="_blank"><img src="https://photos.angel.co/startups/i/549588-5d4deeab6b1f9c3f9f59e39b098d1db0-medium_jpg.jpg?buster=1535147152" alt="Seesaw" width="200" height="200"></a>
+      <a href="https://flipgrid.com/bhavyadwivedi" target="_blank"><img src="fg.png" alt="Google Sites" width="200" height="200"></a>
       <a href="https://classroom.google.com/c/OTAzOTExNzQ1Njla" target="_blank"><img src="gc.png" alt="Google Classroom" width="200" height="200"></a>
+      <a href="https://groups.google.com/forum/#!forum/the-crime-fighters-detective-agency" target="_blank"><img src="https://icon2.cleanpng.com/20180707/ku/kisspng-google-groups-computer-icons-google-logo-g-suite-group-icon-5b415812bb4d56.9649187515310090427672.jpg" alt="Google Groups" width="200" height="200"></a>
+      <h2>Chat, Meetings, and Conference</h2><br>
+      <a href="https://meet.google.com/iae-cruo-kru?hs=151" target="_blank"><img src="https://d.newsweek.com/en/full/1585616/google-meet-logo.jpg" alt="Google Meet" width="200" height="200"></a>
+      <a href="https://hangouts.google.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1of6e44eQuevNREm6mNFbwdmVvaYw4LFp-L8s8BQbSthoIASG&usqp=CAU" alt="Google Hangouts" width="200" height="200"></a>
+      <h2>Utilities</h2><br>
       <a href="https://docs.google.com" target="_blank"><img src="https://www.clipartkey.com/mpngs/m/212-2120028_document-clipart-google-doc-google-docs-logo-png.png" alt="Google Docs" width="200" height="200"></a>
       <a href="https://slides.google.com" target="_blank"><img src="https://www.clipartkey.com/mpngs/m/282-2828314_transparent-google-drive-logo-png-google-slides-logo.png" alt="Google Slides" width="200" height="200"></a>
       <a href="https://sites.google.com" target="_blank"><img src="gsi.png" alt="Google Sites" width="200" height="200"></a>
-      <a href="https://flipgrid.com/bhavyadwivedi" target="_blank"><img src="fg.png" alt="Google Sites" width="200" height="200"></a>
       <a href="https://drive.google.com" target="_blank"><img src="gd.png" alt="Google Drive" width="200" height="200"></a>
-      <a href="https://meet.google.com/iae-cruo-kru?hs=151" target="_blank"><img src="https://d.newsweek.com/en/full/1585616/google-meet-logo.jpg" alt="Google Meet" width="200" height="200"></a>
-      <a href="https://hangouts.google.com" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1of6e44eQuevNREm6mNFbwdmVvaYw4LFp-L8s8BQbSthoIASG&usqp=CAU" alt="Google Hangouts" width="200" height="200"></a>
-      <a href="https://groups.google.com/forum/#!forum/the-crime-fighters-detective-agency" target="_blank"><img src="https://icon2.cleanpng.com/20180707/ku/kisspng-google-groups-computer-icons-google-logo-g-suite-group-icon-5b415812bb4d56.9649187515310090427672.jpg" alt="Google Groups" width="200" height="200"></a>
+      <h2>Administration</h2><br>
+      <div id="admin">
+
+      </div>
+      <p>Sorry. Your account does not have access to the admin section. </p>
+      <button class="collapsible">Troubleshoot</button>
+      <div class="content">
+        <p>Please make sure you are signed in with an account that has admin access. If it does, then try reloading or relogging in. If this problem persists, then please contact/email justinfu718@gmail.com.</p>
+      </div>
     </div>
     <script>
-      // Get the input field
-var input = document.getElementById("pswinput");
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
 
-// Execute a function when the user releases a key on the keyboard
-input.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("logonbtn").click();
-  }
-});
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+
+    </script>
+    <script>
+      // Get the input field
+      var input = document.getElementById("pswinput");
+
+      // Execute a function when the user releases a key on the keyboard
+      input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("logonbtn").click();
+        }
+      });
       if (localStorage.getItem("isloggedin") === "yes") {
         document.getElementById("loginform").style.display = "none";
         document.getElementById("loginbtn").style.display = "none";
