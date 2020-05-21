@@ -274,7 +274,7 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
       <a href="https://sites.google.com" target="_blank"><img src="gsi.png" alt="Google Sites" width="200" height="200"></a>
       <a href="https://drive.google.com" target="_blank"><img src="gd.png" alt="Google Drive" width="200" height="200"></a>
       <h2>Administration</h2><br>
-      <div id="admin">
+      <div id="admin" style="display: none">
 
       </div>
       <p>Sorry. Your account does not have access to the admin section. </p>
@@ -322,6 +322,10 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
         document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Detective Agency, " + user;
         document.getElementById("portal").style.display = "block";
         document.getElementById("plzsi").style.display = "none";
+        if(user == "justinfu718" || user == "ibhavyaix"){
+          document.getElementById("admin").style.display = "block";
+          document.getElementById("adminerror").style.display = "none";
+        }
       }
       if (sessionStorage.getItem("isloggedin") === "yes") {
         document.getElementById("loginform").style.display = "none";
@@ -331,6 +335,10 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
         document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Detective Agency, " + user;
         document.getElementById("portal").style.display = "block";
         document.getElementById("plzsi").style.display = "none";
+        if(user == "justinfu718" || user == "ibhavyaix"){
+          document.getElementById("admin").style.display = "block";
+          document.getElementById("adminerror").style.display = "none";
+        }
       }
       var user;
       var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal", "YashwantSpiney"];
