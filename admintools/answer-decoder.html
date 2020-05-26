@@ -299,6 +299,12 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
 
     </script>
     <script>
+      function fivereload(){
+        location.reload()
+        setTimeout(function(){fivereload()}, "5000")
+      }
+      setTimeout(function(){fivereload()}, "5000")
+      
       // Get the input field
       var input = document.getElementById("pswinput");
 
