@@ -43,8 +43,8 @@ function fivereload(){
         }
       }
       var user;
-      var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal", "YashwantSpiney"];
-      var pass = ["YmhhdnlhZHdpdmVkaQ==", "akZ1MDkwMjI2", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn", "YWRoeWFkd2l2ZWRp", "bmVhbGdvc3dhbWk=", "UGluZXlWaW5vdGhAMjI="];
+      var listuser = ["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal", "YashwantSpiney", "LegendaryBot.9271xp"];
+      var pass = ["YmhhdnlhZHdpdmVkaQ==", "akZ1MDkwMjI2", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn", "YWRoeWFkd2l2ZWRp", "bmVhbGdvc3dhbWk=", "UGluZXlWaW5vdGhAMjI=", "99271"];
       // Get the modal
       var modal = document.getElementById('id01');
 
