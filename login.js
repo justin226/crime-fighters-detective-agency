@@ -1,8 +1,9 @@
-function fivereload(){
+/*function fivereload(){
         location.reload()
         setTimeout(function(){fivereload()}, "5000")
       }
       setTimeout(function(){fivereload()}, "5000")
+      */
       // Get the input field
       var input = document.getElementById("pswinput");
 
