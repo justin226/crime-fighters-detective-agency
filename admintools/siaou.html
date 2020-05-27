@@ -253,12 +253,12 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
       </div>
     </div>
     <div id="portal" style="display: none">
-      
+
       <div id="admin" style="display: none">
         <h3>Sign In as</h3>
         <input type="text" id="username" placeholder="User's username..."><br>
-        <input type="checkbox" id="rememberuser"> Remember User
-        <button id="logonbtn">Login</button><br>
+        <input type="checkbox" id="remember-user"> Remember User
+        <button id="logon-btn">Login</button><br>
       </div>
       <div id="adminerror">
         <p>Sorry. Your account does not have access to the admin section. </p>
@@ -278,7 +278,7 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
       <br>
       <span>
         <h6>
-          Student portal design by Justin Fu. 
+          Student portal design by Justin Fu.
         </h6>
       </span>
     </div>
@@ -296,21 +296,24 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
             content.style.maxHeight = content.scrollHeight + "px";
           }
         });
-      }document.getElementById("logonbtn").addEventListener("click", function() {
-		if (["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal", "YashwantSpiney", "LegendaryBot.9271xp"].includes(document.getElementById("username").value)) {
-			sessionStorage.clear();
-			localStorage.clear();
-			var user = document.getElementById("username").value;
-			sessionStorage.setItem("isloggedin", "yes");
-			sessionStorage.setItem("user", user);
-			if (document.getElementById("rememberuser").checked) {
-				localStorage.setItem("isloggedin", "yes");
-				localStorage.setItem("user", user);
-			}
-			location.reload();
-		}
-	
-});</script>
+      }
+      document.getElementById("logon-btn").addEventListener("click", function() {
+        if (["ibhavyaix", "justinfu718", "adityavelusamy", "ishaurya.garg", "iaavya.garg", "iadhya13", "gosneal", "YashwantSpiney", "LegendaryBot.9271xp"].includes(document.getElementById("username").value)) {
+          sessionStorage.clear();
+          localStorage.clear();
+          var user = document.getElementById("username").value;
+          sessionStorage.setItem("isloggedin", "yes");
+          sessionStorage.setItem("user", user);
+          if (document.getElementById("remember-user").checked) {
+            localStorage.setItem("isloggedin", "yes");
+            localStorage.setItem("user", user);
+          }
+          location.reload();
+        }
+
+      });
+
+    </script>
     <script src="https://justin226.github.io/the-crime-fighters-detective-agency/login.js"></script>
 
   </body>
