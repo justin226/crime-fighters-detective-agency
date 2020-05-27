@@ -74,7 +74,7 @@
             document.getElementById("banner").innerHTML = "Welcome to the Crime Fighters Detective Agency, " + user;
             document.getElementById("portal").style.display = "block";
             document.getElementById("plzsi").style.display = "none";
-            location.reload()
+            location.href = "https://justin226.github.io/the-crime-fighters-detective-agency"
           } else {
             document.getElementById("error").innerHTML = "Incorrect Password";
             document.getElementById("error").style.display = "block";
