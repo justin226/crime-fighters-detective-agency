@@ -280,6 +280,8 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
       <h2>Chat</h2>
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeQP6UXZmmmUK9kfdkuozcQj6Lo_zWhHFEO3nSFJbrioYEiw/viewform?embedded=true" width="640" height="604" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       <iframe src="https://docs.google.com/spreadsheets/u/0/d/1V71O8S-l_J4rmRoxg9JPQu1prN-U9dsXiKJx-NSLXYg/htmlembed/sheet?headers=false&gid=1750846514" width="640" height="604" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <br>
+      <button id="reset">REFRESH</button>
       <h2>Administration Tools</h2><br>
       <div id="admin" style="display: none">
         <a href="admintools/answer-encoder" target="_blank"><img src="https://justin226.github.io/the-crime-fighters-detective-agency/faviconencoder.png" alt="Answer Encoder" width="200" height="200"></a>
@@ -309,6 +311,25 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
       </span>
     </div>
     <script>
+      var src="https://docs.google.com/spreadsheets/u/0/d/1V71O8S-l_J4rmRoxg9JPQu1prN-U9dsXiKJx-NSLXYg/htmlembed/sheet?headers=false&gid=1750846514"
+      document.getElementById("reset").addEventListener("click", function(){
+    document.getElementById("data").removeAttribute("src");
+    document.getElementById("data").setAttribute("src", src);
+  }); 
+  reset();
+  document.getElementById("form").addEventListener("load", function(){
+    setTimeout(function(){
+      document.getElementById("data").removeAttribute("src");
+      document.getElementById("data").setAttribute("src", src)
+    }, 100);
+  });
+  function reset(){
+    setTimeout(function(){
+      document.getElementById("data").removeAttribute("src");
+      document.getElementById("data").setAttribute("src", src);
+      reset();
+    }, 5000);
+  }
       var coll = document.getElementsByClassName("collapsible");
       var i;
 
