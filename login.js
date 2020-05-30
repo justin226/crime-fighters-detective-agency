@@ -41,6 +41,8 @@
         if(user == "justinfu718" || user == "ibhavyaix"){
           document.getElementById("admin").style.display = "block";
           document.getElementById("adminerror").style.display = "none";
+        } else {
+          document.getElementById("anc").innerHTML = "Your Account is managed by users justinfu718 and ibhavyaix."
         }
       }
       var user;
