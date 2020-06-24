@@ -1,16 +1,23 @@
 <h1>Join the CFDA Info Night:</h1><br>
-<a href=""><button disabled>Join the Info Night</button></a>
+<a href="" id="a1"><button id="b1" disabled>Join Zoom Meeting</button></a><br>
+<a href="" id="a2"><button id="b2" disabled>Join Google Meet</button></a>
 <br>
-<h6>Button unlocks at June 27th, 4:55 PDT</h6>
+<h6>Join Zoom Button unlocks at June 27th, 4:55 PDT</h6><br>
+<h6>Join Google Meet Button unlocks at June 27th, 5:35 PDT</h6><br>
 <script>
 var d = new Date();
 var n = d.getTime();
 if(n >= 1593258900000) {
-  document.querySelector("button").removeAttribute("disabled");
-  document.querySelector("a").href="https://us04web.zoom.us/j/73887837513?pwd=ekZCMk51NnZVZk55QzluRUpoY3RWUT09";
+  document.getElementById("b1").removeAttribute("disabled");
+  document.getElementById("a1").href="https://us04web.zoom.us/j/73887837513?pwd=ekZCMk51NnZVZk55QzluRUpoY3RWUT09";
+}
+if(n >= 1593261300000) {
+  document.getElementById("b2").removeAttribute("disabled");
+  document.getElementById("a2").href="https://meet.google.com/aan-zijy-cev";
 }
 setTimeout(function(){
   location.reload()
 }, "5000")
 //https://us04web.zoom.us/j/73887837513?pwd=ekZCMk51NnZVZk55QzluRUpoY3RWUT09
+//https://meet.google.com/aan-zijy-cev
 </script>
