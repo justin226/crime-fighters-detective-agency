@@ -218,6 +218,36 @@ the-crime-fighters-dectective-agency: google classroom, google doc,slides, sites
     <h5 id="plzsi">To get started, please log in.</h5>
     <button id="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
     <button id="logoutbtn" style="width:auto; display: none">Logout</button>
+    <div id="guestform">
+      <div id="id02" class="modal">
+
+
+        <div class="modal-content animate">
+
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <br>
+            <div id="error" style="display: none"></div>
+            <h2>Please confirm guest:</h2><br>
+            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="container">
+            <label for="guestcode"><b>Enter Code:</b></label>
+            <input id="guestcode" type="text" placeholder="Enter Guest Code" name="uname">
+            <button id="guestlogonbtn" type="submit">Login</button>
+            <label>
+              <input id="rememberuser" type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=justinfu718@gmail.com&tf=1&su=hi&body=Hi!%20I%20forgot%20my%20password.%20I%20would%20like%20to%20reset%20my%20password.">password?</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="loginform">
       <div id="id01" class="modal">
 
