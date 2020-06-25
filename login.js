@@ -50,11 +50,16 @@
       var pass = ["YmhhdnlhZHdpdmVkaQ==", "akZ1MDkwMjI2", "YWRpdHlhdmVsdXNhbXk=", "c2hhdXJ5YWdhcmc=", "YWF2eWFnYXJn", "bmVhbGdvc3dhbWk=", "UGluZXlWaW5vdGhAMjI=", "OTkyNzE=", "cXdlcnR5MDk3MTQ="];
       // Get the modal
       var modal = document.getElementById('id01');
-
+      var gmodal = document.getElementById('id02');
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
         if (event.target == modal) {
           modal.style.display = "none";
+        }
+      }
+      window.onclick = function(event) {
+        if (event.target == gmodal) {
+          gmodal.style.display = "none";
         }
       }
       document.getElementById("logonbtn").addEventListener("click", function() {
